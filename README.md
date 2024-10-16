@@ -1,3 +1,3 @@
-# Skrusty Paper
+# Paper Template
 
-This is the paper for [skrusty](https://github.com/shane/skrusty)
+Template for latex paper
