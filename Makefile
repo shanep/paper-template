@@ -35,7 +35,16 @@ arxiv: paper
 checkcites: paper
 	checkcites --unused $^
 
-.PHONY: clean
+.PHONY: clean help
 clean:
 	cd $(FIGURE_DIR) && latexmk -c; rm -f *.synctex.gz && cd ..
 	latexmk -C; rm -f *.bbl
+
+help:
+	@echo "all   - build all figures and paper"
+	@echo "paper - build just the paper"
+	@echo "taps  - build a zip file for submission to ACM taps"
+	@echo "arxiv - build a zip file for submission to arxiv"
+	@echo "checkcites - check the bib file to make sure everything is used"
+	@echo "clean - removed all build cruft"
+	@echo "help - this menu :)"
