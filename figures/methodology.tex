@@ -1,0 +1,29 @@
+\documentclass[]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric}
+
+\begin{document}
+
+    \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.75cm, text centered, draw=black, fill=red!30]
+    \tikzstyle{process} = [rectangle, minimum width=2cm, minimum height=0.75cm, text centered, draw=black, fill=orange!30]
+    \tikzstyle{decision} = [diamond, aspect=2, minimum width=2cm, minimum height=0.75cm, text centered, draw=black, fill=green!30]
+    \tikzstyle{arrow} = [thick, ->, >=stealth]
+
+    \begin{tikzpicture}[node distance=2cm and 2.5cm, scale=0.85, every node/.style={scale=0.85}]
+
+
+    % Nodes
+    \node (start) [startstop] {Start};
+    \node (step1) [process, right of=start] {Step 1};
+    \node (step2) [decision, right of=step1] {Step 2};
+    \node (step3) [process, right of=step2] {Step 3};
+    \node (end) [startstop, right of=step3] {End};
+
+
+    % Arrows
+    \draw [arrow] (start) -- (step1);
+    \draw [arrow] (step1) -- (step2);
+    \draw [arrow] (step2) -- (step3);
+    \draw [arrow] (step3) -- (end);
+    \end{tikzpicture}
+\end{document}

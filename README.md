@@ -1,2 +1,3 @@
-# paper-template
-Template for a latex paper with tikz 
+# Skrusty Paper
+
+This is the paper for [skrusty](https://github.com/shane/skrusty)
