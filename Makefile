@@ -1,7 +1,6 @@
 # Makefile for ACM paper ID will be assigned by the publisher upon acceptance
-PAPER_ID = 50
-PROCEDINGS = esem24
-PAPER_PILE_BIB = https://paperpile.com/eb/zeDiJmjbZP
+PAPER_ID = 00
+PROCEDINGS = tbd
 TAPS := $(PROCEDINGS)-$(PAPER_ID)
 
 %.pdf: %.tex
